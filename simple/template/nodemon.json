@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "exec": "npm run dev",
+  "ignore": [
+    "logs/",
+    "public/"
+  ],
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 3000
+  },
+  "ext": "js json"
+}

@@ -1,0 +1,47 @@
+#! /usr/bin/env node
+
+const app = require('..')
+const http = require('http')
+
+const _normalizePort = (val) => {
+  const port = parseInt(val, 10)
+  if (isNaN(port)) {
+    return val
+  }
+
+  if (port > 0) {
+    return port
+  }
+
+  return false
+}
+
+const server = http.createServer(app.callback())
+const port = _normalizePort(app.rootConfig.port || 3000)
+const appLog = app.logger.app
+
+server.listen(port)
+server.on('error', (error) => {
+  if (error.syscall !== 'listen') {
+    throw error
+  }
+
+  switch (error.code) {
+    case 'EACCES':
+      appLog.info(`${port} requires elevated privileges`)
+      process.exit(1)
+      break
+    case 'EADDRINUSE':
+      appLog.info(`${port} is already in use`)
+      process.exit(1)
+      break
+    default:
+      throw error
+  }
+})
+
+server.on('listening', () => {
+  const addr = server.address()
+  const bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port
+  appLog.info(`Listening on ${bind}`)
+})

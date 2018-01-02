@@ -1,0 +1,31 @@
+{
+  "name": "{{name}}",
+  "version": "0.0.1",
+  "description": "{{name}}",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node bin/www",
+    "start": "nodemon",
+    "lint": "eslint .",
+    "prod": "NODE_ENV=production node bin/www"
+  },
+  "keywords": [],
+  "author": "{{{author}}}",
+  "license": "MIT",
+  "dependencies": {
+    "salak": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.11.0"
+  },
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "license": "MIT"
+}

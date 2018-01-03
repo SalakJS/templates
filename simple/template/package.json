@@ -7,6 +7,8 @@
     "dev": "node bin/www",
     "start": "nodemon",
     "lint": "eslint .",
+    "test": "jest",
+    "test-cov": "npm run test -- --coverage",
     "prod": "NODE_ENV=production node bin/www"
   },
   "keywords": [],
@@ -22,7 +24,9 @@
     "eslint-plugin-node": "^5.2.1",
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
-    "nodemon": "^1.14.7"
+    "jest": "^22.0.4",
+    "nodemon": "^1.14.7",
+    "supertest": "^3.0.0"
   },
   "engines": {
     "node": ">= 7.6.0"

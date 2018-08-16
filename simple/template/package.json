@@ -13,7 +13,6 @@
   },
   "keywords": [],
   "author": "{{{author}}}",
-  "license": "MIT",
   "dependencies": {
     "salak": "^1.0.5"
   },

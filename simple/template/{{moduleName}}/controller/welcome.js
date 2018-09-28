@@ -15,7 +15,7 @@ class Welcome extends Controller {
   }
 
   async actionIndex () {
-    await this.render('home', {
+    await this.view('home', {
       title: 'Salak Application',
       content: 'Hello, {{name}}'
     })

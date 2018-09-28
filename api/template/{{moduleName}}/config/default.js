@@ -5,27 +5,11 @@ module.exports = (app) => {
 
   config.port = 8080
 
-  config.routes = {
-    defaultRoute: 'welcome'
-  }
-
   config.logger = {
     root: path.join(app.baseDir, 'logs'),
     injectConsole: true,
     formatType: 'log4js',
     fileType: 'file'
-  }
-
-  config.plugin = [
-    {
-      name: 'view',
-      package: 'salak-view'
-    }
-  ]
-
-  config.view = {
-    extension: 'ejs',
-    engine: 'ejs'
   }
 
   config.swagger = {
@@ -40,12 +24,8 @@ API Description
       },
       tags: [
         {
-          name: 'Page',
-          description: 'Html Pages.'
-        },
-        {
-          name: 'API',
-          description: 'The API for pages.'
+          name: 'Salak',
+          description: 'Salak Module'
         }
       ]
     }

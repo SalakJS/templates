@@ -5,6 +5,18 @@ module.exports = (app) => {
 
   config.port = 8080
 
+  config.middleware = [
+    {
+      name: 'cors',
+      package: 'salak-cors'
+    }
+  ]
+
+  // ref to https://github.com/SalakJS/salak-cors#options
+  config.cors = {
+    credentials: false // if need cookie, set to `true`
+  }
+
   config.logger = {
     root: path.join(app.baseDir, 'logs'),
     injectConsole: true,

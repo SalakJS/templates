@@ -1,0 +1,40 @@
+{
+  "name": "{{name}}",
+  "version": "1.0.0",
+  "description": "{{name}}",
+  "main": "index.js",
+  "dependencies": {
+    "salak": "^2.0.0-beta.33",
+    "salak-cors": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "@types/node": "^12.0.0",
+    "@types/supertest": "^2.0.7",
+    "concurrently": "^4.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.0",
+    "supertest": "^4.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.4.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "ts:watch": "tsc --watch",
+    "start": "npm run build && concurrently --kill-others \"npm run ts:watch\" \"nodemon\"",
+    "dev": "node app/index.js",
+    "test": "npm run build && jest",
+    "lint": "tslint -p tslint.json",
+    "prod": "NODE_ENV=production node app/index.js"
+  },
+  "keywords": [
+    "salak",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">= 7.6.0"
+  },
+  "author": "{{{author}}}",
+  "license": "MIT"
+}

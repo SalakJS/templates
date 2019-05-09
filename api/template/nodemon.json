@@ -2,7 +2,7 @@
   "verbose": true,
   "exec": "npm run dev",
   "ignore": [
-    "logs/",
+    "logs/*",
     "public/",
     "runtime/"
   ],

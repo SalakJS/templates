@@ -1,4 +1,5 @@
 {
   "simple": "Simple Template",
-  "api": "API Application Template"
+  "api": "API Application Template",
+  "api-ts": "API Application Template with Typescript"
 }

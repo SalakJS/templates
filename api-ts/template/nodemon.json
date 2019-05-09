@@ -1,0 +1,17 @@
+{
+  "verbose": true,
+  "exec": "npm run dev",
+  "ignore": [
+    "./app/logs/*",
+    "./app/test/",
+    "./app/public/",
+    "./app/runtime/",
+    "./app/*.map"
+  ],
+  "watch": ["./app/"],
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 3000
+  },
+  "ext": "js"
+}

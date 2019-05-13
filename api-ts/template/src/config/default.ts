@@ -68,7 +68,5 @@ API Description
     }
   }
 
-  config.unknown = 'unknown'
-
   return config
 }

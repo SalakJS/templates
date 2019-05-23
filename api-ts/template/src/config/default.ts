@@ -14,7 +14,7 @@ export default (app: Salak) => {
 
   config.port = 8080
 
-  config.middlewares = [
+  config.middleware = [
     {
       name: 'cors',
       package: 'salak-cors'
